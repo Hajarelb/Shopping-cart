@@ -1,5 +1,5 @@
 ---
-  - name: Déploiement Shopping Cart avec Ansible
+- name: Déploiement Shopping Cart avec Ansible
   hosts: webservers
   become: no
   connection: ssh
@@ -14,7 +14,7 @@
         msg: "Déploiement de {{ app_name }} sur {{ inventory_hostname }}"
 
     - name: Vérifier la connexion au node
-      raw: echo "Node {{ inventory_hostname }} accessible !"
+      raw: echo "Node {{ inventory_hostname }} accessible"
 
     - name: Vérifier le système
       raw: uname -a
@@ -27,5 +27,4 @@
 
     - name: Afficher le résultat final
       debug:
-      msg: "Application {{ app_name }} déployée avec succès sur {{ inventor
-y_hostname }}"
+        msg: "Application {{ app_name }} déployée avec succès !"
